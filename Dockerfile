@@ -29,7 +29,7 @@ RUN cd /ComfyUI/custom_nodes && git clone https://github.com/journey-ad/Comfy-Mi
 # Install dependencies for Impact Pack
 RUN cd /ComfyUI/custom_nodes/ComfyUI-Impact-Pack && \
     pip install -r requirements.txt && \
-    python install.py
+    python3 install.py
 
 # Install additional useful custom nodes that might include the missing nodes
 RUN cd /ComfyUI/custom_nodes && \
