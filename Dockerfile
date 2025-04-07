@@ -16,7 +16,9 @@ RUN pip install -r requirements.txt
 # Create model directory & download Image Diffuser model
 RUN mkdir -p /ComfyUI/models/checkpoints && \
     curl -L "https://civitai.com/api/download/models/1612720?type=Model&format=SafeTensor&size=pruned&fp=fp16" \
-    -o /ComfyUI/models/checkpoints/ImageDiffuser-pruned-fp16.safetensors
+    -o /ComfyUI/models/checkpoints/illustrious.safetensors && \
+    curl -L "https://civitai.com/api/download/models/1617798?type=Model&format=SafeTensor&size=pruned&fp=fp16" \
+    -o /ComfyUI/models/checkpoints/hassaku.safetensors
 
 # Install custom nodes - separate commands to identify any issues
 RUN mkdir -p /ComfyUI/custom_nodes
