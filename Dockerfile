@@ -19,6 +19,8 @@ RUN mkdir -p /ComfyUI/models/checkpoints && \
     -o /ComfyUI/models/checkpoints/illustrious.safetensors && \
     curl -L "https://civitai.com/api/download/models/1617798?type=Model&format=SafeTensor&size=pruned&fp=fp16" \
     -o /ComfyUI/models/checkpoints/hassaku.safetensors
+    curl -L "https://civitai.com/api/download/models/290640?type=Model&format=SafeTensor&size=pruned&fp=fp16" \
+    -o /ComfyUI/models/checkpoints/pony.safetensors
 
 # Install custom nodes - separate commands to identify any issues
 RUN mkdir -p /ComfyUI/custom_nodes
